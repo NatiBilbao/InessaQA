@@ -1,19 +1,21 @@
 package testSuite;
 
 import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.Alert;
-import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.chrome.ChromeDriver;
 import pages.*;
 import session.Session;
+
+import java.time.Duration;
 
 public class RegistrarUsuario {
 
     PaginaInicial paginaInicial = new PaginaInicial();
 
     PaginaRegistros paginaRegistros = new PaginaRegistros();
+
+    ChromeDriver chrome;
 
     @BeforeEach
     public void openBrowser(){
@@ -28,15 +30,15 @@ public class RegistrarUsuario {
     @Test
     public void registrarUsuarios() throws InterruptedException {
 
-        String fullEmail = "diegosantos98@gmail.com";
+        String fullEmail = "diego2@gmail.com";
         String fullPassword = "40987Diego.";
-        String fullNombres = "Diego Alejandro";
-        String fullApellidoPaterno = "Santos";
-        String fullApellidoMaterno = "Nava";
-        String fullFechaNacimiento ="19/09/1997";
-        String fullTelefono = "61143115";
-        String fullTelefonoReferencia = "76259956";
-        String fullNumeroDocumento = "12452751";
+        String fullNombres = "Diego";
+        String fullApellidoPaterno = "Bilbao";
+        String fullApellidoMaterno = "Bilbao";
+        String fullFechaNacimiento ="15/10/2004";
+        String fullTelefono = "61143119";
+        String fullTelefonoReferencia = "76259961";
+        String fullNumeroDocumento = "12452756";
 
         paginaInicial.registroUsuario.click();
         Thread.sleep(5000);
@@ -61,7 +63,6 @@ public class RegistrarUsuario {
         paginaRegistros.guardarRegistro.click();
         Thread.sleep(5000);
 
-        
         Thread.sleep(5000);
     }
 }
