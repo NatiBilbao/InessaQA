@@ -1,5 +1,6 @@
 package pages;
 
+import controls.Button;
 import controls.TextBox;
 import org.openqa.selenium.By;
 
@@ -16,4 +17,5 @@ public class PaginaRegistros {
 
     public TextBox fechaNacimiento = new TextBox(By.xpath("/html/body/div[2]/div[2]/div/div/div/form/div[7]/div[2]/div/input"));
 
+    public Button genero = new Button(By.xpath("/html/body/div[2]/div[2]/div/div/div/form/div[8]/div[2]/div/span"));
 }
