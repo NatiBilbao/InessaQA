@@ -28,6 +28,8 @@ public class Inicio {
     @Test
     public void descubreLosProgramas() throws InterruptedException {
 
+        Thread.sleep(10000);
+
         paginaInicial.nuestrosServicios.click();
 
         Thread.sleep(10000);
